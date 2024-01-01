@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="./style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    var quantity = 0;
+    var qtyElement = $('<div>').text(quantity).addClass('quantity');
+    $(".addToCart").parent().append(qtyElement);
+
+    $(".addToCart").click(function(){
+        quantity++;
+        qtyElement.text(quantity);
+    });
+});
+</script>
+<style>
+    .con{
+        background-color: bisque;
+        height: 550px;
+        width: 100%;
+        
+    }
+    .txt{
+        display: flex;
+        position: relative;
+        left: 400px;
+        top: 110px;
+        flex-direction: column;
+       
+       
+    }
+    h1{
+        font-size: 60px;
+    }
+
+    .para{
+        height: 600px;
+        width: 100%;
+
+    }
+
+   
+    .hover{
+    width: 100vw;
+    height: 400px;
+}
+ .hover *{
+        margin-right: 140px;
+        
+       
+    }
+
+
+/* .hover:hover{
+    height: 500px;
+    display: flex;
+    top: 20px;
+   
+} */
+
+
+.row col{
+margin-right: 20px;
+}   
+
+.button-group{
+    border: 4px solid black;
+}
+.button-group *{
+border: 1px solid black;
+font-size: larger;
+background-color: white;
+}
+
+.checkout *{
+    background-color:  rgb(242, 194, 51);
+    border: 4px solid black;
+}
+.cart *{
+    background-color:  rgb(242, 194, 51);
+}
+.plus{
+    background-color: rgb(249, 189, 11);
+}
+.minus{
+    background-color: rgb(245, 189, 11);
+}
+
+.cart :hover{
+    background-color: red;
+}
+
+</style>
+<title></title>
+</head>
+<body>
+   <div class="container">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#" style="font-size: 35px;">Dairy.</a>
+      
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+      
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              Dropdown link
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Link 1</a>
+              <a class="dropdown-item" href="#">Link 2</a>
+              <a class="dropdown-item" href="#">Link 3</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="con">
+      <div class="txt" >
+        <h1>ORGANIC NUT MILKS.</h1>
+        <h1>WE MAKE 'EM FRESH,</h1>
+        <h1>YOU DRINK 'EM FRESH.</h1>
+      </div>
+    </div>
+     <div class="para">
+        <div class="row">
+            <div class="col-md-12" style="">
+               
+                <h2>Featured <b>Products</b></h2>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+                <!-- Carousel indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>  
+                <div class="checkout">
+   
+     <input value="0"  min="1" max="999" type="text"  name="quantity"  style="width: 40px; " id="checkout">
+     <button type="button"  id="checkout1">Checkout </button>
+</div> 
+                <!-- Wrapper for carousel items -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="thumb-wrapper">
+                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                    <div class="img-box">
+                                        <img src="/examples/images/products/ipad.jpg" class="img-responsive" alt="">									
+                                    </div>
+                                    <div class="thumb-content">
+                                        <h4>MILK GRADE A</h4>									
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                            </ul>
+                                        </div>
+                                        <p class="item-price"><strike>Rs70.00</strike> <b>Rs60.00</b></p>
+                                        <div class="cart" >
+                                            <div class="button-group">
+                                            <button type="button" class="plus"> + </button>
+                                            <input value="1"  min="1" max="5" type="text"  name="quantity" id="qtn"  style="width: 40px;">
+                                            <button type="button" class="minus" > - </button>
+                                        </div>
+                                        <button type="button" style="width: 110px;border: 5px solid black;" id="add1">add to cart</button>
+                                            
+                                        </div>
+                                    </div>						
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="thumb-wrapper">
+                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                    <div class="img-box">
+                                        <img src="/examples/images/products/headphone.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="thumb-content">
+                                        <h4>MILK GRADE B</h4>									
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                            </ul>
+                                        </div>
+                                        <p class="item-price"><strike>Rs110.00</strike> <b>Rs90.00</b></p>
+                                        <div class="cart" >
+                                            <div class="button-group">
+                                            <button type="button" id="plus2"> + </button>
+                                            <input value="1"  min="1" max="5" type="text"  name="quantity" class="qtn2"  style="width: 40px;">
+                                            <button type="button" id="minus2" > - </button>
+                                        </div>
+                                        <button type="button" style="width: 110px;border: 5px solid black;" id="add2">add to cart</button>
+                                            
+                                        </div>
+                                    </div>						
+                                </div>
+                            </div>		
+                            <!-- <div class="col-sm">
+                                <div class="thumb-wrapper">
+                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                    <div class="img-box">
+                                        <img src="/examples/images/products/macbook-air.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    
+                                </div>
+                            </div>								 -->
+                            <!-- <div class="col-sm">
+                                <div class="thumb-wrapper">
+                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                    <div class="img-box">
+                                        <img src="/examples/images/products/nikon.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="thumb-content">
+                                        <h4>MILK GRADE D</h4>									
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                            </ul>
+                                        </div>
+                                        <p class="item-price"><strike>Rs315.00</strike> <b>Rs250.00</b></p>
+                                        <a href="#" class="addToCart " id="btn">Add to Cart</a>
+                                    </div>						
+                                </div>
+                            </div> -->
+
+                            <div class="col-sm">
+                                <div class="thumb-wrapper">
+                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                    <div class="img-box">
+                                        <img src="/examples/images/products/headphone.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="thumb-content">
+                                        <h4>MILK GRADE B</h4>									
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                            </ul>
+                                        </div>
+                                        <p class="item-price"><strike>Rs50.00</strike> <b>Rs40.00</b></p>
+                                        <div class="cart" >
+                                            <div class="button-group">
+                                            <button type="button"  id="plus1"> + </button>
+                                            <input value="1"  min="1" max="5" type="text"  name="quantity"   style="width: 40px; " class="qtn1">
+                                            <button type="button"  id="minus1"> - </button>
+                                        </div>
+                                        <button type="button" style="width: 110px;border: 5px solid black;" id="add3">add to cart</button>
+                                            
+                                        </div>
+                                    </div>						
+                                </div>
+                            </div>
+                          
+
+                            <div class="hover">
+                                <br>
+                                <br>
+                                <img src="./img/Fronks_Original_01__45224.jpg" alt="" width="20%" id="img1">
+                                <img src="./img/Fronks_Cocoa_01__28865.jpg" alt="" width="20%" id="img2">
+                                <img src="./img/Fronks_Simple_04__73447.jpg" alt="" width="20%" id="img3">
+                            </div>
+                            
+                                   </div>
+                                </div>
+                               </div>
+                               
+
+
+                        </div>
+                    </div>
+                    
+   </div>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var q=$("#qtn").val();
+        
+        $(".plus").click(function(){
+            
+        q++;
+        $("#qtn").attr("value",q);
+        
+    });
+    $(".minus").click(function(){
+            
+            q--;
+            $("#qtn").attr("value",q);
+            
+        });
+
+    });
+
+    $("#add1").click(function(){
+                var add=$("#qtn").val();
+                alert(add+" Product added to cart");
+                var add1=60*add;
+                var before=parseInt($("#checkout").val());
+                $("#checkout").attr("value",add1+before);
+
+
+            });
+
+    
+    
+</script> 
+
+<script>
+$(document).ready(function(){
+        var q=$(".qtn1").val();
+        
+        $("#plus1").click(function(){
+            
+        q++;
+        $(".qtn1").attr("value",q);
+        
+    });
+    $("#minus1").click(function(){
+            
+            q--;
+            $(".qtn1").attr("value",q);
+            
+        });
+
+    });
+
+    $("#add2").click(function(){
+                var add=$(".qtn2").val();
+                alert(add+" Products added to cart");
+                var add2=90*add;
+                var before=parseInt($("#checkout").val());
+                $("#checkout").attr("value",add2+before);
+
+
+            });
+</script>
+
+<script>
+    $(document).ready(function(){
+            var q=$(".qtn2").val();
+            
+            $("#plus2").click(function(){
+                
+            q++;
+            $(".qtn2").attr("value",q);
+            
+        });
+        $("#minus2").click(function(){
+                
+                q--;
+                $(".qtn2").attr("value",q);
+                
+            });
+    
+        });
+
+        $("#add3").click(function(){
+                var add=$(".qtn1").val();
+                alert(add+" Products added to cart");
+                var add2=40*add;
+                var before=parseInt($("#checkout").val());
+                $("#checkout").attr("value",add2+before);
+
+
+            });
+
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>
